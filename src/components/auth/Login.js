@@ -34,6 +34,13 @@ class Login extends Component {
     this.props.loginUser(userData);
   }
 
+  //Check if the user is aleady authenticated & redirect to dashboard
+  componentDidMount() {
+    if (this.props.auth.isAuthenticated) {
+      this.props.history.push('/dashboard');
+    }
+  }
+
   //Once we recieve errors from errorReducer (dispatch)
   componentWillReceiveProps(nextProps) {
     //Check authenticated and redirect
