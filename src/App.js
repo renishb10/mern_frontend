@@ -11,6 +11,7 @@ import Landing from './components/layouts/Landing';
 import Footer from './components/layouts/Footer';
 import Register from './components/auth/Register';
 import Login from './components/auth/Login';
+import Dashboard from './components/dashboard/dashboard';
 
 import './App.css';
 import { setCurrentUser, logoutUser } from './actions/authActions';
@@ -48,6 +49,7 @@ class App extends Component {
             <div className="container">
               <Route exact path="/register" component={ Register } /> 
               <Route exact path="/login" component={ Login } />
+              <Route exact path="/dashboard" component={ Dashboard } />
             </div>
             <Footer />
           </div>
